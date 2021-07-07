@@ -1,0 +1,25 @@
+\documentclass[11pt,a4paper]{report}
+
+\include{I-packages}
+\include{I-config}
+\include{I-info.tex}
+\include{I-packages-2} % some package need to be loaded last in preamble
+
+
+\begin{document}
+
+\input{1-titlepages}
+\clearpage
+\input{2-abstract}
+\clearpage
+\input{3-acknowledgments}
+
+\tableofcontents
+\listoftables %optional
+\listoffigures %optional
+
+\clearpage
+
+\subfile{Chapters/Chapter1}
+
+\end{document}
