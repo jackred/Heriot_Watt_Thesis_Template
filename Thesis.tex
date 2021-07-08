@@ -5,33 +5,57 @@
 \include{I-info.tex}
 \include{I-packages-2} % some package need to be loaded last in preamble
 
-
 \begin{document}
+
 \pagestyle{empty}
 \input{Preliminaries/1-titlepages}
 \clearpage
+%% remove this line if you don't want pagination on preliminary pages
+%% also read the comment below, for table of content and other
+\pagestyle{preliminary}
 \input{Preliminaries/2-abstract}
 \clearpage
 \input{Preliminaries/3-dedication}
 \clearpage
 \input{Preliminaries/4-acknowledgments}
 \clearpage
-% read about declaration in file
-% \input{Preliminaries/5-declaration}
+%% read about declaration in file
+%% \input{Preliminaries/5-declaration}
+
 
 \tableofcontents
-\thispagestyle{empty}
-\listoftables %optional
-\thispagestyle{empty}
-\listoffigures %optional
-\thispagestyle{empty}
-% gloassary
-% list of publications
+\listoftables
+\listoffigures
+
+%% if you don't want pagination you need to use this commented part instead of the one above for the table of content/list of figure/etc
+%% this is because the toc is defined in an annoying way, especially multi page one
+%% solution found here: https://tex.stackexchange.com/a/173423
+% {
+%     \pagestyle{empty}              % Removes numbers from middle pages.
+%     \fancypagestyle{plain}         % Re-definition removes numbers from first page.
+%     {
+%         \fancyhf{}%                       % Clear all header and footer fields.
+%         \renewcommand{\headrulewidth}{0pt}% Clear rules (remove these two lines if not desired).
+%         \renewcommand{\footrulewidth}{0pt}%
+%     }
+%     \tableofcontents
+%     \thispagestyle{empty}
+%     \listoftables %optional
+%     \thispagestyle{empty}
+%     \listoffigures %optional
+%     \thispagestyle{empty}
+%     glossary
+%     list of publications
+% }
+
+
 
 \clearpage
 
 \pagestyle{chapter}
 \subfile{Chapters/Chapter1-Introduction}
 \subfile{Chapters/Chapter2}
+\appendix
+\subfile{Appendix/Appendix1}
 
 \end{document}

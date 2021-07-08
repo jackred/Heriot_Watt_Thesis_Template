@@ -24,6 +24,13 @@
 \setlength{\textwidth}{425pt}
 
 %% style
+%% preliminary, just roman pagination + empty header
+\fancypagestyle{preliminary}{
+    \renewcommand{\headrulewidth}{0pt}
+    \fancyhead[RCL]{}
+
+    \pagenumbering{Roman}
+}
 %% chapter/classic text style
 \fancypagestyle{chapter}{
     % title of the chapter, left header, no uppercase, 10 pt, italics, no bold
@@ -32,6 +39,7 @@
 
     \fancyfoot[C]{\thepage}
     \renewcommand{\headrulewidth}{0.4pt}
+    \renewcommand{\footrulewidth}{0pt}
     \pagenumbering{arabic}
 }
 
