@@ -1,4 +1,4 @@
-% prefer than direct use in usepackage geometry
+%% prefer than direct use in usepackage geometry
 %% A4 layout in point is % 595x842
 
 %% default value
@@ -6,7 +6,7 @@
 \setlength{\voffset}{0pt}
 
 %% height
-% 72 - 60 + 20 + 25 = 57
+%% 72 - 60 + 20 + 25 = 57
 \setlength{\topmargin}{-60pt}
 \setlength{\headheight}{20pt}
 \setlength{\headsep}{25pt}
@@ -14,7 +14,7 @@
 \setlength{\footskip}{30pt}
 
 %% width
-% 72 + 32 + 10 = 114pt = 40mm
+%% 72 + 32 + 10 = 114pt = 40mm
 \setlength{\oddsidemargin}{32pt}
 \setlength{\evensidemargin}{32pt}
 \setlength{\marginparsep}{10pt}
@@ -33,7 +33,7 @@
 }
 %% chapter/classic text style
 \fancypagestyle{chapter}{
-    % title of the chapter, left header, no uppercase, 10 pt, italics, no bold
+    %% title of the chapter, left header, no uppercase, 10 pt, italics, no bold
     \fancyhead[L]{\normalfont\itshape\fontsize{10pt}{12pt}\selectfont\nouppercase{\leftmark}}
     \fancyhead[R]{}
 
@@ -43,20 +43,44 @@
     \pagenumbering{arabic}
 }
 
+%% define length and scaling for baseline
+\newcommand{\headingBaseline}{12}
+\newcommand{\headingBaselineDiv}{10}
+\newlength{\chapterFontSize}
+\newlength{\sectionFontSize}
+\newlength{\subsectionFontSize}
+\newlength{\chapterBaseline}
+\newlength{\sectionBaseline}
+\newlength{\subsectionBaseline}
+
+%% change those value if you want to change the chapter/section/subsection font size
+\setlength{\chapterFontSize}{14pt}
+\setlength{\sectionFontSize}{12pt}
+\setlength{\subsectionFontSize}{12pt}
+
+%% automatic computation for baseline, rule of thumb is 1.2
+\setlength{\chapterBaseline}{ \chapterFontSize * \headingBaseline / \headingBaselineDiv}
+\setlength{\sectionBaseline}{ \sectionFontSize * \headingBaseline / \headingBaselineDiv}
+\setlength{\subsectionBaseline}{ \subsectionFontSize * \headingBaseline / \headingBaselineDiv}
+
+
 %% headings
-% Chapter, capitalised initial letter, 14-point, bold
+%% Chapter, capitalised initial letter, 14-point, bold
 \titleformat{\chapter}[display]
-  {\normalfont\bfseries\fontsize{14pt}{17pt}\selectfont}{\chaptertitlename\ \thechapter}{14pt}{\capitalisewords}
+    {\normalfont\bfseries\fontsize{\chapterFontSize}{\chapterBaseline}\selectfont}{\chaptertitlename\ \thechapter}{14pt}{\capitalisewords}
+%% left|above|below
 \titlespacing{\chapter}{0pt}{10pt}{25pt}
 
-% Section, capitalised initial letter, 12-point
+%% Section, capitalised initial letter, 12-point
 \titleformat{\section}[hang]
-  {\normalfont\fontsize{12pt}{14pt}\selectfont}{\thesection}{5pt}{\capitalisewords}
+    {\normalfont\fontsize{\sectionFontSize}{\sectionBaseline}\selectfont}{\thesection}{5pt}{\capitalisewords}
+%% left|above|below
 \titlespacing{\section}{0pt}{25pt}{15pt}
 
-% Subsection, 12-point, italic
+%% Subsection, 12-point, italic
 \titleformat{\subsection}[hang]
-  {\normalfont\itshape\fontsize{12pt}{14pt}\selectfont\MakeLowercase}{\thesubsection}{5pt}{\makefirstuc}
+    {\normalfont\itshape\fontsize{\subsectionFontSize}{\subsectionBaseline}\selectfont\MakeLowercase}{\thesubsection}{5pt}{\makefirstuc}
+%% left|above|below
 \titlespacing{\subsection}{0pt}{20pt}{10pt}
   
 
