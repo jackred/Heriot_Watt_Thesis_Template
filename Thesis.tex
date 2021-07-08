@@ -1,4 +1,4 @@
-\documentclass[11pt,a4paper]{report}
+\documentclass[12pt,a4paper]{report}
 
 \include{I-packages}
 \include{I-config}
@@ -7,19 +7,31 @@
 
 
 \begin{document}
-
-\input{1-titlepages}
+\pagestyle{empty}
+\input{Preliminaries/1-titlepages}
 \clearpage
-\input{2-abstract}
+\input{Preliminaries/2-abstract}
 \clearpage
-\input{3-acknowledgments}
+\input{Preliminaries/3-dedication}
+\clearpage
+\input{Preliminaries/4-acknowledgments}
+\clearpage
+% read about declaration in file
+% \input{Preliminaries/5-declaration}
 
 \tableofcontents
+\thispagestyle{empty}
 \listoftables %optional
+\thispagestyle{empty}
 \listoffigures %optional
+\thispagestyle{empty}
+% gloassary
+% list of publications
 
 \clearpage
 
-\subfile{Chapters/Chapter1}
+\pagestyle{chapter}
+\subfile{Chapters/Chapter1-Introduction}
+\subfile{Chapters/Chapter2}
 
 \end{document}
