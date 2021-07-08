@@ -1,5 +1,6 @@
 % prefer than direct use in usepackage geometry
-    
+%% A4 layout in point is % 595x842
+
 %% default value
 \setlength{\hoffset}{0pt}
 \setlength{\voffset}{0pt}
@@ -22,5 +23,38 @@
 \setlength{\textheight}{728pt}
 \setlength{\textwidth}{425pt}
 
-\pagenumbering{arabic}
-    
+%% style
+%% chapter/classic text style
+\fancypagestyle{chapter}{
+    % title of the chapter, left header, no uppercase, 10 pt, italics, no bold
+    \fancyhead[L]{\normalfont\itshape\fontsize{10pt}{12pt}\selectfont\nouppercase{\leftmark}}
+    \fancyhead[R]{}
+
+    \fancyfoot[C]{\thepage}
+    \renewcommand{\headrulewidth}{0.4pt}
+    \pagenumbering{arabic}
+}
+
+%% headings
+% Chapter, capitalised initial letter, 14-point, bold
+\titleformat{\chapter}[display]
+  {\normalfont\bfseries\fontsize{14pt}{17pt}\selectfont}{\chaptertitlename\ \thechapter}{14pt}{\capitalisewords}
+\titlespacing{\chapter}{0pt}{10pt}{25pt}
+
+% Section, capitalised initial letter, 12-point
+\titleformat{\section}[hang]
+  {\normalfont\fontsize{12pt}{14pt}\selectfont}{\thesection}{5pt}{\capitalisewords}
+\titlespacing{\section}{0pt}{25pt}{15pt}
+
+% Subsection, 12-point, italic
+\titleformat{\subsection}[hang]
+  {\normalfont\itshape\fontsize{12pt}{14pt}\selectfont\MakeLowercase}{\thesubsection}{5pt}{\makefirstuc}
+\titlespacing{\subsection}{0pt}{20pt}{10pt}
+  
+
+%% table of content
+\renewcommand{\contentsname}{Table of Contents}
+\setcounter{tocdepth}{2} 
+
+%% list of figure
+\renewcommand*\listfigurename{Figure table}
