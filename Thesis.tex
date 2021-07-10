@@ -25,10 +25,10 @@
 
 
 \tableofcontents
-\listoftables
-\listoffigures
-\glsaddall
-\printnoidxglossary[type=\acronymtype]
+\listoftables % optional
+\listoffigures % optional
+\glsaddall 
+\printnoidxglossary[type=\acronymtype, title=Glossaries] % optional
 
 %% if you don't want pagination you need to use this commented part instead of the one above for the table of content/list of figure/etc
 %% this is because the toc is defined in an annoying way, especially multi page one
@@ -60,4 +60,10 @@
 \subfile{Chapters/Chapter2}
 \appendix
 \subfile{Appendix/Appendix1}
+
+
+\label{Bibliography}
+\bibliographystyle{abbrv}
+\bibliography{Bibliography}
+
 \end{document}
