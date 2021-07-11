@@ -100,3 +100,13 @@
 \AtEveryCitekey{\addtocategory{cited}{\thefield{entrykey}}}
 \addbibresource{Bibliography.bib}
 \nocite{*}
+
+%% hyperref setup
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks = true,
+    linkcolor = black, % normal internal links
+    citecolor = blue, % bibliographical links
+    urlcolor = blue, % linked urls
+    filecolor = black % url which open local files
+}
