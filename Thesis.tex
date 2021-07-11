@@ -24,20 +24,21 @@
 % % \input{Preliminaries/5-declaration}
 \includepdf[pages=-]{Preliminaries/5-declaration.pdf}
 
-
-\tableofcontents
-\listoftables % optional
-\listoffigures % optional
-\glsaddall 
-\printnoidxglossary[type=\acronymtype, title=Glossaries] % optional
-%% put your publications in BibMine.bib 
-%% They will be displayed here
-\begin{refsection}[BibMine.bib]
-\DeclareFieldFormat{labelnumberwidth}{#1}
-\nocite{*}
-\printbibliography[omitnumbers=true,title={List of Publications}]
-\end{refsection}
-
+{
+    \hypersetup{linkcolor=black}
+    \tableofcontents
+    \listoftables % optional
+    \listoffigures % optional
+    \glsaddall % this is to include all acronym. You can do a sort of citation for acronym and include only the one you use, Look at the glossary package for details.
+    \printnoidxglossary[type=\acronymtype, title=Glossaries] % optional
+    %% put your publications in BibMine.bib 
+    %% They will be displayed here
+    \begin{refsection}[BibMine.bib]
+    \DeclareFieldFormat{labelnumberwidth}{#1}
+    \nocite{*}
+    \printbibliography[omitnumbers=true,title={List of Publications}]
+    \end{refsection}
+}
 
 %% if you don't want pagination you need to use this commented part instead of the one above for the table of content/list of figure/etc
 %% this is because the toc is defined in an annoying way, especially multi page one
@@ -67,6 +68,7 @@
 \pagestyle{chapter}
 \subfile{Chapters/Chapter1-Introduction}
 \subfile{Chapters/Chapter2}
+\subfile{Chapters/Chapter3}
 \appendix
 \subfile{Appendix/Appendix1}
 

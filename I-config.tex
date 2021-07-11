@@ -108,8 +108,14 @@
 \usepackage{hyperref}
 \hypersetup{
     colorlinks = true,
-    linkcolor = black, % normal internal links
+    linkcolor = blue, % normal internal links, like ref, can be black tbh
     citecolor = blue, % bibliographical links
     urlcolor = blue, % linked urls
     filecolor = black % url which open local files
 }
+
+%% modified reference function
+%% https://tex.stackexchange.com/a/438998
+\newcommand\eref[1]{equation~(\ref{#1})}
+\newcommand\tref[1]{table~\ref{#1}}
+\newcommand\fref[1]{figure~\ref{#1}}
