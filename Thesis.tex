@@ -30,6 +30,14 @@
 \listoffigures % optional
 \glsaddall 
 \printnoidxglossary[type=\acronymtype, title=Glossaries] % optional
+%% put your publications in BibMine.bib 
+%% They will be displayed here
+\begin{refsection}[BibMine.bib]
+\DeclareFieldFormat{labelnumberwidth}{#1}
+\nocite{*}
+\printbibliography[omitnumbers=true,title={List of Publications}]
+\end{refsection}
+
 
 %% if you don't want pagination you need to use this commented part instead of the one above for the table of content/list of figure/etc
 %% this is because the toc is defined in an annoying way, especially multi page one
@@ -66,7 +74,7 @@
 \clearpage
 \stepcounter{chapter}
 \addcontentsline{toc}{chapter}{\thechapter\ \ \ \ Publication 1}
-\includepdf[pages=-]{Publication1.pdf}
+\includepdf[pages=-]{Publications/Publication1.pdf}
 
 
 %% using biblatex rather than bibtex to easily have further reading and references
@@ -74,8 +82,12 @@
 %% Log and output files > trash icons in Overleaf
 %% sorted by citation
 \label{Bibliography}
-\printbibliography[category=cited, title={References}]
+\printbibliography[category=cited, title={References}, resetnumbers=true]
 %% sorted by alphabetical order, using author name
-\printbibliography[title={Bibliography}, notcategory=cited]
+\begin{refsection}
+\DeclareFieldFormat{labelnumberwidth}{#1}
+\nocite{*}
+\printbibliography[title={Bibliography}, notcategory=cited, omitnumbers=true]
+\end{refsection}
 
 \end{document}
