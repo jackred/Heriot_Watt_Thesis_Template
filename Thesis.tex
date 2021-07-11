@@ -62,8 +62,9 @@
 \subfile{Appendix/Appendix1}
 
 
+%% using biblatex rather than bibtex to easily have further reading and references
 \label{Bibliography}
-\bibliographystyle{abbrv}
-\bibliography{Bibliography}
+\printbibliography[category=cited, title={References}]
+\printbibliography[title={Bibliography}, notcategory=cited]
 
 \end{document}

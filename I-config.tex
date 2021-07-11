@@ -94,5 +94,9 @@
 %% init gloassaries
 \makenoidxglossaries
 
-%% rename bibliography
-\renewcommand{\bibname}{References}
+%% bibliography config
+%% https://tex.stackexchange.com/a/6977
+\DeclareBibliographyCategory{cited}
+\AtEveryCitekey{\addtocategory{cited}{\thefield{entrykey}}}
+\addbibresource{Bibliography.bib}
+\nocite{*}
