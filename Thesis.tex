@@ -61,10 +61,20 @@
 \appendix
 \subfile{Appendix/Appendix1}
 
+%% add publications in pdf format
+\clearpage
+\stepcounter{chapter}
+\addcontentsline{toc}{chapter}{\thechapter\ \ \ \ Publication 1}
+\includepdf[pages=-]{Publication1.pdf}
+
 
 %% using biblatex rather than bibtex to easily have further reading and references
+%% you need to remove the cache file when adding files to the bibliography
+%% Log and output files > trash icons in Overleaf
+%% sorted by citation
 \label{Bibliography}
 \printbibliography[category=cited, title={References}]
+%% sorted by alphabetical order, using author name
 \printbibliography[title={Bibliography}, notcategory=cited]
 
 \end{document}
