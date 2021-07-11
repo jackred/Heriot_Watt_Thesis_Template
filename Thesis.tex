@@ -12,7 +12,7 @@
 \include{I-packages}
 \include{I-config}
 \include{I-info}
-\include{I-glossaries}
+\include{I-glossary}
 \include{I-packages-2} % some package need to be loaded last in preamble
 
 \begin{document}
@@ -39,7 +39,7 @@
     \listoftables % optional
     \listoffigures % optional
     \glsaddall % this is to include all acronym. You can do a sort of citation for acronym and include only the one you use, Look at the glossary package for details.
-    \printnoidxglossary[type=\acronymtype, title=Glossaries] % optional
+    \printnoidxglossary[type=\acronymtype, title=Glossary] % optional
     %% put your publications in BibMine.bib 
     %% They will be displayed here
     \begin{refsection}[BibMine.bib]
@@ -53,6 +53,7 @@
 %% this is because the toc is defined in an annoying way, especially multi page one
 %% solution found here: https://tex.stackexchange.com/a/173423
 % {
+%     \hypersetup{linkcolor=black}
 %     \pagestyle{empty}              % Removes numbers from middle pages.
 %     \fancypagestyle{plain}         % Re-definition removes numbers from first page.
 %     {
@@ -66,8 +67,17 @@
 %     \thispagestyle{empty}
 %     \listoffigures %optional
 %     \thispagestyle{empty}
-%     glossary
-%     list of publications
+%     \glsaddall % this is to include all acronym. You can do a sort of citation for acronym and include only the one you use, Look at the glossary package for details.
+%     \printnoidxglossary[type=\acronymtype, title=Glossary] % optional
+%     \thispagestyle{empty}
+%     %% put your publications in BibMine.bib 
+%     %% They will be displayed here
+%     \begin{refsection}[BibMine.bib]
+%     \DeclareFieldFormat{labelnumberwidth}{#1}
+%     \nocite{*}
+%     \printbibliography[omitnumbers=true,title={List of Publications}]
+%     \end{refsection}
+%     \thispagestyle{empty}
 % }
 
 
@@ -79,7 +89,7 @@
 \subfile{Chapters/Chapter2}
 \subfile{Chapters/Chapter3}
 \appendix
-\subfile{Appendix/Appendix1}
+\subfile{Appendices/Appendix1}
 
 %% add publications in pdf format
 \clearpage
