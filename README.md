@@ -9,6 +9,24 @@ MIT is softer than the lppl or whatever other License you can find, hence my use
 ## Disclaimer
 Any word missing or other type of error should be attributed to my lack of attention and my absence of motivation about reading everything twice.  
 
+## Implementation
+I tried to follow the guideline as much as possible, here is what I made:
+- A4 sized, with 40mm left margin and 20mm other margin, with 2 spaces between sentences and 1.5 spacing between lines, with justified text.
+- 12pt font, similar to Times New Roman (LaTeX don't have the exact one)
+- Page Numbering 10mm above the edge, Roman numerals (possible to remove) for the preliminaries
+- Titlepage with everything asked for
+- Abstract/Dedication/Acknowledgements page
+- Pdf inclusion code to add the Declaration form right in the Thesis
+- Table of Content, List of Tables, Figures, Glossary (for acronym), List of Publications by the Candidate (using the bibliography system)
+- One chapter per files, that you can compile alone to avoid long compilation on the whole Thesis
+- Heading: chapter 14pt, section 12pt, subsection 12pt italicised, all bold. Chapter and section have capitalised initial in the heading (not in the toc). It can be changed in the config files as it can be annoying if you have word that should be all uppercase.
+- Chapter numbering, note numbering
+- Headers with chapter title (or leftmark if you change it), 10pt italicsm no bold, Footers with only page number
+- Table/Figures/Equations command for referencing, propoer numbering
+- Appendices letter numbering
+- Published paper as pdf in appendix, referenced in toc
+- List of reference and Bibliography (or further reading) using biblatex
+
 ## Modifications
 
 There is probably some modifications to the Template itself you want to make. I'll try to list a few I thought of.
