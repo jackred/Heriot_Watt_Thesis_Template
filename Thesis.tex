@@ -34,6 +34,7 @@
 \includepdf[pages=-]{Preliminaries/5-declaration.pdf}
 
 {
+    \setstretch{1}
     \hypersetup{linkcolor=black}
     \tableofcontents
     \listoftables % optional
@@ -103,12 +104,12 @@
 %% Log and output files > trash icons in Overleaf
 %% sorted by citation
 \label{Bibliography}
-\printbibliography[category=cited, title={References}, resetnumbers=true]
+\printbibliography[category=cited, title={References}, resetnumbers=true, heading=bibintoc]
 %% sorted by alphabetical order, using author name
 \begin{refsection}
 \DeclareFieldFormat{labelnumberwidth}{#1}
 \nocite{*}
-\printbibliography[title={Bibliography}, notcategory=cited, omitnumbers=true]
+\printbibliography[title={Bibliography}, notcategory=cited, omitnumbers=true, heading=bibintoc]
 \end{refsection}
 
 \end{document}
