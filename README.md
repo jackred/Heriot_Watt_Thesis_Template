@@ -61,7 +61,7 @@ I added some auto capitalising because I thought it was nice, but it can be pret
 ## How to use
 
 ### Overleaf
-A template is available on Overleaf [here](todo)
+A template is available on Overleaf [here](https://www.overleaf.com/latex/templates/heriot-watt-thesis-template/whcchqtmfxgf)
 
 ### Github
 You can download the lastest version (normally the same as on Overleaf) on [github](https://github.com/jackred/Heriot_Watt_Thesis_Template) clicking on `code` then `Download ZIP`. You can also clone or fork the repository directly to create your thesis repository.
