@@ -19,7 +19,7 @@ If you think the one you did are worth mentionning, you can submit a Pull Reques
 ### Comment
 You will find some comment in the Template. It is often there to change some part. The most notable one are:
 - the Table Of Content/List Of Figures/etc one, which allow you to remove the pagination from those specific pages (it is very annoying to do)
-- Some part of the title page I don't are necessary
+- Some part of the title page I don't think are necessary
 
 It also works the other way, part such as the List of Figures, List of Publications, Bibliography, etc are optional and can be commented.  
 
