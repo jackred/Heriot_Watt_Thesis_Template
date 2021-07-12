@@ -55,6 +55,9 @@ I put 3 bibliographies:
 
 Only the references use a numbered column. The two other are sorted alphabetically. You work should be put in the `BibMine.bib` file. It will be listed in the References and Further reading (depending if you cite it). You will have to modify the `refsection` and/or create some new one. Everything was done with biblatex.
 
+### Section/Chapter heading / Thesis title
+I added some auto capitalising because I thought it was nice, but it can be pretty annoying oif you want to write full uppercase word. Most of the time, the command `\capitalisewords` need to be removedm or `\MakeLowerCase` and `\makefirstuc` (both).
+
 ## How to use
 
 ### Overleaf
