@@ -65,24 +65,31 @@
 
 
 %% headings
-%% Chapter, capitalised initial letter, 14-point, bold
+%% Chapter, 14-point, bold
 \titleformat{\chapter}[display]
-    {\normalfont\bfseries\fontsize{\chapterFontSize}{\chapterBaseline}\selectfont}{\chaptertitlename\ \thechapter}{14pt}{\capitalisewords}
+    {\normalfont\bfseries\fontsize{\chapterFontSize}{\chapterBaseline}\selectfont}{\chaptertitlename\ \thechapter}{14pt}{}
+%% capitalised initial letter,
+% \titleformat{\chapter}[display]
+%     {\normalfont\bfseries\fontsize{\chapterFontSize}{\chapterBaseline}\selectfont}{\chaptertitlename\ \thechapter}{14pt}{\capitalisewords}
 %% left|above|below
 \titlespacing{\chapter}{0pt}{10pt}{25pt}
 
-%% Section, capitalised initial letter, 12-point
+%% Section, 12-point
 \titleformat{\section}[hang]
-    {\normalfont\bfseries\fontsize{\sectionFontSize}{\sectionBaseline}\selectfont}{\thesection}{5pt}{\capitalisewords}
+    {\normalfont\bfseries\fontsize{\sectionFontSize}{\sectionBaseline}\selectfont}{\thesection}{5pt}{}
+%% capitalised  initial letter
+% \titleformat{\section}[hang]
+%     {\normalfont\bfseries\fontsize{\sectionFontSize}{\sectionBaseline}\selectfont}{\thesection}{5pt}{\capitalisewords}
 %% left|above|below
 \titlespacing{\section}{0pt}{25pt}{15pt}
 
 %% Subsection, 12-point, italic
 \titleformat{\subsection}[hang]
-    {\normalfont\bfseries\itshape\fontsize{\subsectionFontSize}{\subsectionBaseline}\selectfont\MakeLowercase}{\thesubsection}{5pt}{\makefirstuc}
+    {\normalfont\bfseries\itshape\fontsize{\subsectionFontSize}{\subsectionBaseline}\selectfont}{\thesubsection}{5pt}{}
+% \titleformat{\subsection}[hang]
+%     {\normalfont\bfseries\itshape\fontsize{\subsectionFontSize}{\subsectionBaseline}\selectfont\MakeLowercase}{\thesubsection}{5pt}{\makefirstuc}
 %% left|above|below
 \titlespacing{\subsection}{0pt}{20pt}{10pt}
-  
 
 %% table of content
 \renewcommand{\contentsname}{Table of Contents}
